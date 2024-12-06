@@ -43,8 +43,8 @@
 
        <!-- switch button section start -->
        <div class="flex justify-center gap-6 my-2 ">
-        <button class="btn text-lg px-6 rounded-lg bg-lime-400">Donation</button>
-        <button class="btn text-lg px-6 rounded-lg border-slate-400">History</button>
+        <button id="showDonateBtn" class="btn text-lg px-6 rounded-lg bg-lime-400">Donation</button>
+        <button id="ShowHistoryBtn" class="btn text-lg px-6 rounded-lg border-slate-400">History</button>
      </div>
        <!-- switch button section end -->
 
@@ -53,11 +53,11 @@
 
    <!-- main section satrt  -->
   
-    <main>
+    <main id="donateCalculate">
 
-      <div class="  lg:flex lg:flex-col gap-6 mt-4 ">
+      <div  class="  lg:flex lg:flex-col gap-6 mt-4 ">
           
-           <div class="  lg:border border-slate-200 p-8 rounded-lg   lg:mx-96 ">
+           <div class="  lg:border border-slate-200 p-8 rounded-lg w-fit  lg:mx-96 ">
             <div class="lg:flex justify-center gap-6 lg:px-64">
               <img  src="./assets/noakhali.png" alt="">
               <div>
@@ -68,20 +68,40 @@
  
                  </div>
  
-                <h2 class=" text-xl font-bold mt-4">Donate for Flood at Noakhali, Bangladesh</h2>
+                <h2 id="donate-place"  class=" text-xl font-bold mt-4">Donate for Flood at Noakhali, Bangladesh</h2>
                       <p class="lg:w-96"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will  help provide essential supplies and  to those affected by this disaster.  Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
  
                       <input id="amount-input" class="w-full p-3 rounded-lg border border-gray-300 mt-5" type="text" placeholder="Write Donation Amount" >
 
-                      <button id="Donate-btn" class=" btn text-lg p-2 w-full rounded-lg mt-7 bg-lime-400">Donate Now</button>
+                      <button onclick="shoModal()" id="Donate-btn" class=" btn text-lg p-2 w-full rounded-lg mt-7 bg-lime-400">Donate Now</button>
                 
-                
+                      <div id="DonateSucsesfull">                    
+                        <!-- Open the modal using ID.showModal() method -->
+                   
+                     <dialog id="my_modal_1" class="modal">
+                      <div class="modal-box text-center">
+                        <h1 class="text-4xl font-bold">Congrats!</h1>
+                        <img class="size-10 ml-48 mt-4" src="./assets/coin.png" alt="">
+                        <p class="py-4"> You Have donated for HumanKind</p>
+                        <h3 class="font-bold text-lg">Succsessfully</h3>
+                        <div class="modal-action flex justify-center items-center ">
+                          <form class="" method="dialog">
+                        
+                            <button class="btn ">Close confrimations</button>
+                          </form>
+                        </div>
+                      </div>
+                    </dialog>
+                      
+                       
+                                       
+                      </div>
               </div>
  
             </div>
            </div>
 
-           <div class="  lg:border border-slate-200 p-8 rounded-lg   lg:mx-96 ">
+           <div class="  lg:border border-slate-200 p-8 rounded-lg  w-fit lg:mx-96 ">
             <div class="lg:flex justify-center gap-6 lg:px-64">
               <img  src="./assets/feni.png" alt="">
               <div>
@@ -92,7 +112,7 @@
  
                  </div>
  
-                <h2 class=" text-xl font-bold mt-4">Donate for Flood at Noakhali, Bangladesh</h2>
+                <h2 id="donate-place" class=" text-xl font-bold mt-4">Donate for Flood at Noakhali, Bangladesh</h2>
                       <p class="lg:w-96"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will  help provide essential supplies and  to those affected by this disaster.  Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
  
                       <input id="amount-input-1" class="w-full p-3 rounded-lg border border-gray-300 mt-5" type="text" placeholder="Write Donation Amount" >
@@ -105,7 +125,7 @@
             </div>
            </div>
            
-           <div class="  lg:border border-slate-200 p-8 rounded-lg   lg:mx-96 ">
+           <div class="  border border-slate-200 p-8 rounded-lg w-fit  lg:mx-96 ">
             <div class="lg:flex justify-center gap-6 lg:px-64">
               <img  src="./assets/quota-protest.png" alt="">
               <div>
@@ -116,7 +136,7 @@
  
                  </div>
  
-                <h2 class=" text-xl font-bold mt-4">Donate for Flood at Noakhali, Bangladesh</h2>
+                <h2 id="donate-place"  class=" text-xl font-bold mt-4">Donate for Flood at Noakhali, Bangladesh</h2>
                       <p class="lg:w-96"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will  help provide essential supplies and  to those affected by this disaster.  Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
  
                       <input id="amount-input-2" class="w-full p-3 rounded-lg border border-gray-300 mt-5" type="text" placeholder="Write Donation Amount" >
@@ -127,20 +147,31 @@
               </div>
  
             </div>
-           </div>
+           </div> 
 
          
-          
-
-
       </div>
+
 
 
     </main>
 
      <!-- main section end -->
+
+<!--  -->
+     <section id="HistorySection">
+     
+            <div id="History-container" class="flex flex-col lg:flex gap-4 justify-center items-center text-center">
+                
+           
+                   
+               </div>
+               
+            </div>
+     </section>
     
-    <script src="./Js/utility.js"></script>
-    <script src="./Js/event.js"></script>
+     <script src="./Js/feather.js"></script>
+     <script src="./Js/event.js"></script>
+     <script src="./Js/utility.js"></script>
   </body>
 </html>
