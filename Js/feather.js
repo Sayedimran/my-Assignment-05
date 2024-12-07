@@ -14,33 +14,36 @@ const HistoryBtnShow = document.getElementById('ShowHistoryBtn')
 HistoryBtnShow.addEventListener('click', function () {
 
     showElementById('HistorySection');
-    console.log('ki holo 1 ');
+    
 
-
-    const HistoryDiv = document.createElement('div');
-
-    const donateInputAmount = getInputElementById('amount-input');
-
-    const donatePlaseName = document.getElementById('donate-place').innerText;
-
-
+    
     HistoryBtnShow.classList.add('bg-lime-400');
     DonateBtnShow.classList.remove('bg-lime-400');
-
-    if (isNaN(donateInputAmount) || donateInputAmount <= 0) {
-        alert('Failed to donate')
-        return;
-    }
-    else {
-        HistoryDiv.className = "border p-8 px-32 w-fit mt-6 rounded-lg border-gray-300  bg-white";
-        HistoryDiv.innerHTML = `
-        
-                    <h1 class="text-lg font-bold">${donateInputAmount.toFixed(2)} Taka is ${donatePlaseName}</h1>
-                    <p>Date:${new Date()}</p>
-    `
-
-
-        document.getElementById('History-container').appendChild(HistoryDiv);
-
-    }
 });
+
+
+const homeBtnShow = document.getElementById('HomeEvent')
+homeBtnShow.addEventListener('click', function () {
+
+    console.log('Home btn cunnect');
+    BlogBtnSowById('hiddenBlog');
+    BlogBtnSowById('donateCalculate');
+    BlogBtnSowById('HistorySection');
+    BlogBtnSowById('blogEvent');
+
+
+
+})
+
+
+
+const blogBtnshow = document.getElementById('blogEvent');
+
+blogBtnshow.addEventListener('click', function () {
+    BlogBtnSowById('HomeEvent')
+
+    BlogBtnHiddenById('hiddenBlog');
+    BlogBtnHiddenById('donateCalculate');
+    BlogBtnHiddenById('HistorySection');
+
+})
